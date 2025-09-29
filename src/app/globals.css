@@ -1,50 +1,67 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
+    /* Summit Tutoring Brand Colors */
+    --navy-900: #0d2a3a;
+    --navy-700: #153e54;
+    --navy-600: #1e4a66;
+    --navy-500: #2a5a7a;
+    --gold-600: #caa453;
+    --gold-500: #d8b46a;
+    --gold-400: #e0c47a;
+    --gold-300: #e8d48a;
+    --cream-50: #fff8e6;
+    --cream-100: #fff1cc;
+    --ink-900: #0f1f2e;
+    --ink-800: #1a2b3a;
+    --ink-700: #2a3d4a;
+    --ink-100: #e7eef3;
+    
+    /* Legacy shadcn variables for compatibility */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 20% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 20% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%; /* Deep navy blue */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 158.1 64.4% 51.6%; /* Teal green */
-    --secondary-foreground: 210 40% 98%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 45.4 93.4% 47.5%; /* Warm amber */
-    --accent-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 20% 12%;
+    --primary: 210 40% 15%; /* navy-900 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 93% 47%; /* gold-500 */
+    --secondary-foreground: 210 40% 15%;
+    --accent: 45 93% 47%; /* gold-500 */
+    --accent-foreground: 210 40% 15%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    --ring: 210 40% 15%;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
+    --background: 210 20% 12%;
+    --foreground: 0 0% 100%;
+    --card: 210 20% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 20% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 45 93% 47%;
+    --primary-foreground: 210 40% 15%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
+    --ring: 45 93% 47%;
   }
 }
 
@@ -52,7 +69,45 @@
   * {
     @apply border-gray-200;
   }
+  
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-ink-900 font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-ink-900;
+  }
+  
+  /* Custom focus styles for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2;
+  }
+  
+  /* Gold divider utility */
+  .gold-divider {
+    @apply relative;
+  }
+  
+  .gold-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gold-500;
+  }
+}
+
+@layer components {
+  /* Section spacing utility */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  
+  /* Container with proper max-width */
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-medium hover:scale-[1.01];
   }
 }

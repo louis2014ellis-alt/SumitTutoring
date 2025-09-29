@@ -3,11 +3,12 @@ import { Mail, Linkedin, BookOpen } from "lucide-react";
 
 const navigation = {
   main: [
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Blog", href: "/blog" },
+    { name: "Our Teaching", href: "/our-teaching" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Marketplace", href: "/marketplace" },
+    { name: "AI Tutor", href: "/ai-tutor" },
     { name: "Contact", href: "/contact" },
+    { name: "Privacy", href: "/privacy" },
   ],
   social: [
     {

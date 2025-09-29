@@ -1,0 +1,60 @@
+{
+  "lastSynced": "2025-01-28",
+  "gigUrl": "https://www.fiverr.com/s/8zggAVp",
+  "currency": "GBP",
+  "plans": [
+    {
+      "key": "trial",
+      "name": "Trial Session",
+      "price": 15,
+      "durationMinutes": 30,
+      "description": "Perfect for new students to experience our tutoring style",
+      "bullets": [
+        "30-minute focused session",
+        "Assessment of current level",
+        "Feedback on student's needs",
+        "No long-term commitment",
+        "Perfect introduction to our approach"
+      ],
+      "cta": "Book Trial",
+      "highlight": "Great for trying us out!",
+      "popular": false
+    },
+    {
+      "key": "standard",
+      "name": "Standard Session",
+      "price": 45,
+      "durationMinutes": 60,
+      "description": "Regular one-on-one tutoring session for any subject",
+      "bullets": [
+        "60 minutes of focused tutoring",
+        "Coverage of chosen topics",
+        "Homework help included",
+        "Follow-up exercises provided",
+        "Email support for 24 hours"
+      ],
+      "cta": "Book Session",
+      "highlight": "Most Popular",
+      "popular": true
+    },
+    {
+      "key": "premium",
+      "name": "Premium Package",
+      "price": 200,
+      "originalPrice": 225,
+      "durationMinutes": 300,
+      "description": "Best value for ongoing support and exam preparation",
+      "bullets": [
+        "5 hours of tutoring (save £25)",
+        "Flexible scheduling",
+        "Progress tracking",
+        "Comprehensive study materials",
+        "Priority booking",
+        "Unlimited email support"
+      ],
+      "cta": "Purchase Package",
+      "highlight": "Best Value",
+      "popular": false
+    }
+  ]
+}
