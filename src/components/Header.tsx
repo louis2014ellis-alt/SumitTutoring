@@ -26,11 +26,12 @@ export function Header() {
         <div className="flex w-full items-center justify-between py-6">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="font-heading text-2xl font-bold text-primary">
+              {/* Logo placeholder - replace with actual logo */}
+              <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg mr-3 flex items-center justify-center">
+                <span className="text-slate-900 font-bold text-sm">S</span>
+              </div>
+              <span className="font-heading text-2xl font-bold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
                 Summit Tutoring
-              </span>
-              <span className="ml-2 text-sm text-muted-foreground">
-                GCSE & A-Level Expert
               </span>
             </Link>
           </div>
@@ -63,9 +64,14 @@ export function Header() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between mb-8">
-                    <span className="font-heading text-xl font-bold text-primary">
-                      Summit Tutoring
-                    </span>
+                    <div className="flex items-center">
+                      <div className="w-6 h-6 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg mr-2 flex items-center justify-center">
+                        <span className="text-slate-900 font-bold text-xs">S</span>
+                      </div>
+                      <span className="font-heading text-xl font-bold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                        Summit Tutoring
+                      </span>
+                    </div>
                     <Button
                       variant="ghost"
                       size="sm"

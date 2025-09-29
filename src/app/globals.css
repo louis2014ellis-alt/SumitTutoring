@@ -4,12 +4,14 @@
 @layer base {
   :root {
     /* Summit Tutoring Brand Colors */
-    --navy-900: #0d2a3a;
+    --summit-blue: #0C1D36;
+    --summit-gold: #D4AF37;
+    --navy-900: #0C1D36;
     --navy-700: #153e54;
     --navy-600: #1e4a66;
     --navy-500: #2a5a7a;
-    --gold-600: #caa453;
-    --gold-500: #d8b46a;
+    --gold-600: #D4AF37;
+    --gold-500: #D4AF37;
     --gold-400: #e0c47a;
     --gold-300: #e8d48a;
     --cream-50: #fff8e6;

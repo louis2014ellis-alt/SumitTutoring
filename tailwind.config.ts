@@ -19,15 +19,19 @@ const config: Config = {
     extend: {
       colors: {
         // Summit Tutoring Brand Colors
+        summit: {
+          blue: "#0C1D36",
+          gold: "#D4AF37",
+        },
         navy: {
-          900: "#0d2a3a",
+          900: "#0C1D36",
           700: "#153e54",
           600: "#1e4a66",
           500: "#2a5a7a",
         },
         gold: {
-          600: "#caa453",
-          500: "#d8b46a",
+          600: "#D4AF37",
+          500: "#D4AF37",
           400: "#e0c47a",
           300: "#e8d48a",
         },

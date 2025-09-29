@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { SummitButton } from "@/components/ui/summit-button";
 import { 
   Award, 
   CheckCircle, 
@@ -74,102 +75,103 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* 1. Hero Section */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-20 text-white relative overflow-hidden" style={{backgroundColor: '#0C1D36'}}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative z-10">
             <div className="text-center">
-              <p className="text-sm font-medium text-yellow-400 uppercase tracking-wider mb-4">
+              <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{color: '#D4AF37'}}>
                 Professional Online Tutoring Agency
               </p>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                GCSE & A-Level Maths & Physics
+                Personalized Online Tutoring for Every Learner
               </h1>
-              <p className="text-lg text-slate-100 max-w-3xl mx-auto mb-8 leading-relaxed">
-                Clear, patient support tailored to every learner. We adapt lessons to every brain, 
-                preparing students not just for exams, but for a future where remote learning and 
-                flexible thinking are the norm.
+              <p className="text-lg text-slate-100 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Clear, patient support tailored to every brain. From academic success to future-ready skills, 
+                Summit adapts lessons for all learners in a world where remote learning and flexible thinking 
+                are the new standard.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold">
-                  <Link href="/pricing">
-                    View Pricing
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-slate-900">
-                  <Link href="/tutors">
-                    Meet Our Tutors
-                    <Users className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+              <div className="flex justify-center">
+                <SummitButton href="/tutors" variant="primary">
+                  Meet Our Tutors
+                  <Users className="ml-2 h-5 w-5" />
+                </SummitButton>
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-700 to-slate-900 opacity-50"></div>
+        <div className="absolute inset-0 opacity-20" style={{background: 'linear-gradient(135deg, #0C1D36 0%, #153e54 50%, #0C1D36 100%)'}}></div>
       </section>
 
       {/* 2. Our Mission */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm font-medium text-yellow-600 uppercase tracking-wider mb-2">
+            <p className="text-sm font-medium uppercase tracking-wider mb-2" style={{color: '#D4AF37'}}>
               Our Mission
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
               Fixing a Broken System
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5" style={{backgroundColor: '#D4AF37'}}></div>
             </h2>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                <h3 className="text-2xl font-bold text-slate-900 mb-6" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
                   The Problem
                 </h3>
-                <p className="text-slate-700 mb-4 leading-relaxed">
+                <p className="text-slate-700 mb-6 leading-relaxed text-lg">
                   Traditional education was designed for a different era. It assumes all students learn the same way, 
                   at the same pace, with the same interests. This one-size-fits-all approach leaves many students 
                   feeling lost, frustrated, or like they're "not smart enough."
                 </p>
-                <ul className="space-y-2 text-slate-700">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Outdated teaching methods</span>
+                <ul className="space-y-4 text-slate-700">
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">⚠️</span>
+                    <div>
+                      <span className="font-semibold text-slate-900">Outdated teaching methods</span>
+                      <p className="text-sm text-slate-600 mt-1">One-size-fits-all approaches that don't match how brains actually learn</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Poor neurodivergent support</span>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">❌</span>
+                    <div>
+                      <span className="font-semibold text-slate-900">Poor neurodivergent support</span>
+                      <p className="text-sm text-slate-600 mt-1">Students with ADHD, dyslexia, or anxiety often struggle in rigid environments</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Limited personalization</span>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">⚡</span>
+                    <div>
+                      <span className="font-semibold text-slate-900">Limited personalization</span>
+                      <p className="text-sm text-slate-600 mt-1">Large classes make it impossible to adapt to individual learning styles</p>
+                    </div>
                   </li>
                 </ul>
               </div>
-              <div className="bg-yellow-50 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+              <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border border-yellow-200">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
                   Our Solution
                 </h3>
-                <p className="text-slate-700 mb-4 leading-relaxed">
+                <p className="text-slate-700 mb-6 leading-relaxed text-lg">
                   We adapt lessons to every brain, preparing learners not just for exams, but for a future where 
                   remote learning and flexible thinking are the norm.
                 </p>
-                <div className="bg-white p-4 rounded-lg">
-                  <p className="text-slate-700 italic text-sm">
-                    "We believe no one is smart or dumb—we all just think differently. 
-                    Summit Tutoring helps every learner climb higher."
-                  </p>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-yellow-200">
+                  <blockquote className="text-center">
+                    <p className="text-slate-700 italic text-lg leading-relaxed">
+                      "We believe no one is smart or dumb—we all just think differently. 
+                      Summit Tutoring helps every learner climb higher."
+                    </p>
+                  </blockquote>
                 </div>
               </div>
             </div>
-            <div className="text-center mt-8">
-              <Button asChild variant="outline">
-                <Link href="/mission">
-                  Learn More About Our Mission
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+            <div className="text-center mt-12">
+              <SummitButton href="/mission" variant="outline">
+                Learn More About Our Mission
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </SummitButton>
             </div>
           </div>
         </div>
@@ -214,7 +216,7 @@ export default function Home() {
                     <span className="text-slate-700">
                       <strong>Optional breaks</strong> and flexible flow to keep sessions productive.
                     </span>
-                  </li>
+          </li>
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-lg">
@@ -439,7 +441,7 @@ export default function Home() {
                         <span className="text-sm text-slate-700">
                           {feature}
                         </span>
-                      </li>
+          </li>
                     ))}
                   </ul>
                   
