@@ -33,12 +33,12 @@ export function Footer() {
             <div className="flex items-center mb-4">
               <BookOpen className="h-8 w-8 text-primary mr-2" />
               <span className="font-heading text-xl font-bold text-primary">
-                Louis Ellis
+                Summit Tutoring
               </span>
             </div>
             <p className="text-sm text-gray-600 mb-4">
-              First-Class BEng graduate offering expert STEM tutoring in Maths, 
-              Physics, and Engineering. Building confidence through clear explanations 
+              First-Class graduate offering expert GCSE & A-Level tutoring in Maths, 
+              Physics, Chemistry, and more. Building confidence through clear explanations 
               and patient guidance.
             </p>
             <div className="flex space-x-4">
@@ -101,7 +101,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">
-              © 2025 Louis Ellis. All rights reserved.
+              © 2025 Summit Tutoring. All rights reserved.
             </p>
             <p className="text-sm text-gray-500 mt-2 md:mt-0">
               Built with Next.js & Tailwind CSS

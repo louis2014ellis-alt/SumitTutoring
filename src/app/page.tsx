@@ -14,9 +14,12 @@ import {
 } from "lucide-react";
 
 const subjects = [
-  { name: "Mathematics", icon: Calculator, description: "GCSE to University level" },
-  { name: "Physics", icon: Atom, description: "A-Level and beyond" },
-  { name: "Engineering", icon: Cpu, description: "Electrical & Electronic" },
+  { name: "Mathematics", icon: Calculator, description: "GCSE, A-Level & University" },
+  { name: "Physics", icon: Atom, description: "GCSE, A-Level & University" },
+  { name: "Chemistry", icon: Atom, description: "GCSE & A-Level" },
+  { name: "Engineering", icon: Cpu, description: "A-Level & University" },
+  { name: "Computer Science", icon: Cpu, description: "GCSE, A-Level & University" },
+  { name: "English", icon: BookOpen, description: "GCSE & A-Level" },
 ];
 
 const stats = [
@@ -54,12 +57,12 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-heading text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Excel in STEM with{" "}
-              <span className="text-primary">First-Class</span> Guidance
+              Excel in GCSE & A-Level with{" "}
+              <span className="text-primary">Summit Tutoring</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
-              Tutoring in Mathematics, Physics & Engineering by a First-Class BEng (Hons) graduate. 
-              Building confidence through clear explanations and patient guidance.
+              First-Class graduate tutor providing personalized, patient tutoring that boosts grades and confidence. 
+              Expert guidance in Mathematics, Physics, Chemistry, and more.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -76,16 +79,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Why Choose Summit Section */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-primary">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-gray-900">
+              Why Choose Summit Tutoring?
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Four key reasons why students and parents trust us
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="text-center">
+              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-primary" />
               </div>
-            ))}
+              <h3 className="font-heading text-lg font-semibold text-gray-900 mb-2">
+                First-Class Graduate
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Tutoring by a First-Class Honors graduate with proven academic excellence
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold text-gray-900 mb-2">
+                Patient Explanations
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Renowned for patient teaching and clear, step-by-step explanations
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Star className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold text-gray-900 mb-2">
+                Exam-Focused Support
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Expert guidance aligned with GCSE/A-Level exam board requirements
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold text-gray-900 mb-2">
+                Proven Results
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Track record of students improving by 1-2 grades within months
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -158,7 +207,7 @@ export default function Home() {
               Expert tutoring across key STEM subjects
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {subjects.map((subject) => (
               <Card key={subject.name} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">

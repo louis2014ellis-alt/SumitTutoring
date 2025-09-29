@@ -25,10 +25,10 @@ export function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <span className="font-heading text-2xl font-bold text-primary">
-                Louis Ellis
+                Summit Tutoring
               </span>
               <span className="ml-2 text-sm text-muted-foreground">
-                STEM Tutor
+                GCSE & A-Level Expert
               </span>
             </Link>
           </div>
@@ -62,7 +62,7 @@ export function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between mb-8">
                     <span className="font-heading text-xl font-bold text-primary">
-                      Louis Ellis
+                      Summit Tutoring
                     </span>
                     <Button
                       variant="ghost"

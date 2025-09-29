@@ -31,7 +31,7 @@ const subjects = [
   {
     name: "Physics",
     icon: Atom,
-    levels: ["A-Level", "University"],
+    levels: ["GCSE", "A-Level", "University"],
     description: "Understanding the fundamental principles of physics through interactive explanations and real-world applications.",
     topics: [
       "Mechanics and Dynamics",
@@ -40,6 +40,20 @@ const subjects = [
       "Quantum Physics",
       "Optics and Waves",
       "Modern Physics"
+    ]
+  },
+  {
+    name: "Chemistry",
+    icon: Atom,
+    levels: ["GCSE", "A-Level"],
+    description: "Master chemical concepts from atomic structure to organic chemistry with clear explanations and practical examples.",
+    topics: [
+      "Atomic Structure",
+      "Bonding and Structure",
+      "Organic Chemistry",
+      "Physical Chemistry",
+      "Analytical Chemistry",
+      "Practical Skills"
     ]
   },
   {
@@ -55,59 +69,87 @@ const subjects = [
       "Power Systems",
       "Microcontrollers"
     ]
+  },
+  {
+    name: "Computer Science",
+    icon: Cpu,
+    levels: ["GCSE", "A-Level", "University"],
+    description: "Programming, algorithms, and computer science theory with hands-on coding practice and exam preparation.",
+    topics: [
+      "Programming (Python, Java, C++)",
+      "Algorithms and Data Structures",
+      "Computer Systems",
+      "Databases",
+      "Software Engineering",
+      "Theory of Computation"
+    ]
+  },
+  {
+    name: "English",
+    icon: BookOpen,
+    levels: ["GCSE", "A-Level"],
+    description: "Literature analysis, creative writing, and language skills to excel in English exams and coursework.",
+    topics: [
+      "Literature Analysis",
+      "Creative Writing",
+      "Language and Structure",
+      "Poetry and Prose",
+      "Essay Writing",
+      "Exam Techniques"
+    ]
   }
 ];
 
 const pricingPlans = [
   {
-    name: "Single Session",
-    price: "£45",
-    duration: "1 hour",
-    description: "Perfect for targeted help with specific topics or exam preparation",
+    name: "Trial Session",
+    price: "£15",
+    duration: "30 minutes",
+    description: "Perfect for new students to experience our tutoring style",
     features: [
-      "1-hour focused session",
-      "Personalised learning plan",
-      "Session recording (optional)",
-      "Follow-up resources",
-      "Email support for 24 hours"
+      "30-minute focused session",
+      "Assessment of current level",
+      "Feedback on student's needs",
+      "No long-term commitment",
+      "Perfect introduction to our approach"
     ],
     popular: false,
-    buttonText: "Book Session"
+    buttonText: "Book Trial",
+    highlight: "Great for trying us out!"
   },
   {
-    name: "5-Session Package",
-    price: "£200",
-    duration: "5 hours",
-    originalPrice: "£225",
-    description: "Great for ongoing support and building strong foundations",
+    name: "Standard Session",
+    price: "£45",
+    duration: "1 hour",
+    description: "Regular one-on-one tutoring session for any subject",
     features: [
-      "5 hours of tutoring",
+      "60 minutes of focused tutoring",
+      "Coverage of chosen topics",
+      "Homework help included",
+      "Follow-up exercises provided",
+      "Email support for 24 hours"
+    ],
+    popular: true,
+    buttonText: "Book Session",
+    highlight: "Most Popular"
+  },
+  {
+    name: "Premium Package",
+    price: "£200",
+    duration: "5 sessions",
+    originalPrice: "£225",
+    description: "Best value for ongoing support and exam preparation",
+    features: [
+      "5 hours of tutoring (save £25)",
       "Flexible scheduling",
       "Progress tracking",
       "Comprehensive study materials",
       "Priority booking",
-      "Email support throughout"
-    ],
-    popular: true,
-    buttonText: "Purchase Package"
-  },
-  {
-    name: "10-Session Package",
-    price: "£380",
-    duration: "10 hours",
-    originalPrice: "£450",
-    description: "Best value for comprehensive support and long-term improvement",
-    features: [
-      "10 hours of tutoring",
-      "Flexible scheduling",
-      "Detailed progress reports",
-      "Custom study materials",
-      "Priority booking",
-      "Unlimited email support",
-      "Free consultation session"
+      "Unlimited email support"
     ],
     popular: false,
-    buttonText: "Purchase Package"
+    buttonText: "Purchase Package",
+    highlight: "Best Value"
   }
 ];
 
@@ -228,10 +270,10 @@ export default function Services() {
                   plan.popular ? 'ring-2 ring-accent' : ''
                 }`}
               >
-                {plan.popular && (
+                {(plan.popular || plan.highlight) && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
-                      Most Popular
+                      {plan.highlight}
                     </span>
                   </div>
                 )}

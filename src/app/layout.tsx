@@ -16,13 +16,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Louis Ellis - Expert STEM Tutor | First-Class BEng Graduate",
-  description: "First-class Engineering graduate offering online tutoring in Maths, Physics, and Engineering. Build confidence and excel in STEM with personalised lessons.",
-  keywords: ["STEM tutor", "online tutoring", "maths tutor", "physics tutor", "engineering tutor", "GCSE", "A-Level", "university"],
-  authors: [{ name: "Louis Ellis" }],
+  title: "Summit Tutoring - Expert GCSE & A-Level Tutor | First-Class Graduate",
+  description: "First-class graduate offering expert GCSE & A-Level tutoring in Maths, Physics, Chemistry, and more. Build confidence and excel with personalized lessons.",
+  keywords: ["GCSE tutor", "A-Level tutor", "online tutoring", "maths tutor", "physics tutor", "chemistry tutor", "exam preparation", "UK tutoring"],
+  authors: [{ name: "Summit Tutoring" }],
   openGraph: {
-    title: "Louis Ellis - Expert STEM Tutor",
-    description: "First-class Engineering graduate offering online tutoring in Maths, Physics, and Engineering.",
+    title: "Summit Tutoring - Expert GCSE & A-Level Tutor",
+    description: "First-class graduate offering expert GCSE & A-Level tutoring in Maths, Physics, Chemistry, and more.",
     type: "website",
     locale: "en_GB",
   },
