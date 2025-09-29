@@ -6,14 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Our Teaching", href: "/our-teaching" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Marketplace", href: "/marketplace" },
-  { name: "AI Tutor", href: "/ai-tutor" },
-  { name: "Contact", href: "/contact" },
-];
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "Mission", href: "/mission" },
+    { name: "Tutors", href: "/tutors" },
+    { name: "Our Teaching", href: "/our-teaching" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Marketplace", href: "/marketplace" },
+    { name: "AI Tutor", href: "/ai-tutor" },
+    { name: "Contact", href: "/contact" },
+  ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

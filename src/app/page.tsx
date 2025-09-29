@@ -1,10 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Section } from "@/components/ui/section";
-import { Feature } from "@/components/ui/feature";
-import { PricingCard } from "@/components/ui/pricing-card";
-import { Testimonial } from "@/components/ui/testimonial";
-import { Badge } from "@/components/ui/badge";
 import { 
   Award, 
   CheckCircle, 
@@ -25,8 +20,8 @@ const pricingData = getPricingData();
 const features = [
   {
     icon: <Award className="h-8 w-8" />,
-    title: "First-Class Graduate Tutor",
-    description: "Strong subject expertise with up-to-date teaching methods and proven academic excellence."
+    title: "First-Class Graduate Tutors",
+    description: "Expert educators with proven academic excellence and up-to-date teaching methods."
   },
   {
     icon: <CheckCircle className="h-8 w-8" />,
@@ -56,19 +51,19 @@ const subjects = [
 
 const testimonials = [
   {
-    quote: "Louis's clear explanations and patience helped me understand complex physics concepts that I'd been struggling with for months.",
+    quote: "The team's clear explanations and patience helped me understand complex physics concepts that I'd been struggling with for months.",
     name: "Sarah M.",
     role: "A-Level Physics Student",
     rating: 5
   },
   {
-    quote: "My son's confidence in maths improved dramatically thanks to Louis's teaching approach. Highly recommended!",
+    quote: "My son's confidence in maths improved dramatically thanks to Summit's teaching approach. Highly recommended!",
     name: "David K.",
     role: "Parent of GCSE Student",
     rating: 5
   },
   {
-    quote: "Louis breaks down engineering concepts in a way that makes them accessible and interesting. Excellent tutor.",
+    quote: "Summit breaks down engineering concepts in a way that makes them accessible and interesting. Excellent tutoring agency.",
     name: "Emma R.",
     role: "University Engineering Student",
     rating: 5
@@ -84,72 +79,103 @@ export default function Home() {
           <div className="relative z-10">
             <div className="text-center">
               <p className="text-sm font-medium text-yellow-400 uppercase tracking-wider mb-4">
-                GCSE & A-Level Maths & Physics
+                Professional Online Tutoring Agency
               </p>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                Clear, patient tutoring that lifts grades and confidence
+                GCSE & A-Level Maths & Physics
               </h1>
               <p className="text-lg text-slate-100 max-w-3xl mx-auto mb-8 leading-relaxed">
-                First-Class BEng graduate offering clear, patient online tutoring in GCSE & A-Level Maths and Physics. 
-                Exam-focused and neurodivergent-aware—tailored to how <em>you</em> learn.
+                Clear, patient support tailored to every learner. We adapt lessons to every brain, 
+                preparing students not just for exams, but for a future where remote learning and 
+                flexible thinking are the norm.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold">
-                  <Link href="#pricing">
-                    Book a Session
+                  <Link href="/pricing">
+                    View Pricing
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-slate-900">
-                  <Link href={pricingData.gigUrl} target="_blank" rel="noopener noreferrer">
-                    Message on Fiverr
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                  <Link href="/tutors">
+                    Meet Our Tutors
+                    <Users className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
             </div>
           </div>
         </div>
-        {/* Subtle background pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-700 to-slate-900 opacity-50"></div>
       </section>
 
-      {/* 2. Why Summit (USP) */}
+      {/* 2. Our Mission */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm font-medium text-yellow-600 uppercase tracking-wider mb-2">
-              Our Difference
+              Our Mission
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-              Our Difference
+              Fixing a Broken System
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
             </h2>
-            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-              Four key reasons why students and parents trust Summit Tutoring
-            </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-yellow-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <div className="text-yellow-600">
-                    {feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                  {feature.title}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-4" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                  The Problem
                 </h3>
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  {feature.description}
+                <p className="text-slate-700 mb-4 leading-relaxed">
+                  Traditional education was designed for a different era. It assumes all students learn the same way, 
+                  at the same pace, with the same interests. This one-size-fits-all approach leaves many students 
+                  feeling lost, frustrated, or like they're "not smart enough."
                 </p>
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Outdated teaching methods</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Poor neurodivergent support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Limited personalization</span>
+                  </li>
+                </ul>
               </div>
-            ))}
+              <div className="bg-yellow-50 p-6 rounded-2xl">
+                <h3 className="text-xl font-semibold text-slate-900 mb-4" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                  Our Solution
+                </h3>
+                <p className="text-slate-700 mb-4 leading-relaxed">
+                  We adapt lessons to every brain, preparing learners not just for exams, but for a future where 
+                  remote learning and flexible thinking are the norm.
+                </p>
+                <div className="bg-white p-4 rounded-lg">
+                  <p className="text-slate-700 italic text-sm">
+                    "We believe no one is smart or dumb—we all just think differently. 
+                    Summit Tutoring helps every learner climb higher."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <Button asChild variant="outline">
+                <Link href="/mission">
+                  Learn More About Our Mission
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Neurodivergent-Aware Teaching */}
+      {/* 3. Neurodivergent-Aware Learning */}
       <section className="py-16 bg-yellow-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -195,8 +221,13 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Brain className="h-6 w-6 text-yellow-600 mt-1 flex-shrink-0" />
                   <div>
+                    <h4 className="font-semibold text-slate-900 mb-2" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                      Personal Experience
+                    </h4>
                     <p className="text-sm text-slate-700 italic">
-                      "Diagnosed ADHD myself and close family with dyslexia/dyscalculia—this experience shapes how I teach."
+                      "Our founder was diagnosed with ADHD and has close family with dyslexia/dyscalculia—this 
+                      experience shapes how we approach every student—with understanding, patience, and methods 
+                      that actually work for different types of brains."
                     </p>
                   </div>
                 </div>
@@ -246,7 +277,114 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Pricing */}
+      {/* 5. Tutors (Agency framing) */}
+      <section className="py-16 bg-slate-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+              Our Tutors
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
+            </h2>
+            <p className="text-lg text-slate-100 max-w-3xl mx-auto">
+              Expert educators with a shared mission of inclusive, evidence-based teaching
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                    Current Team
+                  </h3>
+                  <p className="text-slate-100 mb-6 leading-relaxed">
+                    Our lead tutor brings First-Class BEng credentials and personal experience with neurodivergent learning. 
+                    More tutors with unique styles and specializations are joining our team soon.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-slate-100">
+                      <CheckCircle className="h-4 w-4 text-yellow-400" />
+                      <span className="text-sm">First-Class BEng Graduate</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-100">
+                      <CheckCircle className="h-4 w-4 text-yellow-400" />
+                      <span className="text-sm">Neurodivergent-aware teaching</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-100">
+                      <CheckCircle className="h-4 w-4 text-yellow-400" />
+                      <span className="text-sm">5+ years experience</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-100">
+                      <CheckCircle className="h-4 w-4 text-yellow-400" />
+                      <span className="text-sm">More tutors coming soon</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="bg-yellow-500/20 rounded-full w-32 h-32 mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-16 w-16 text-yellow-400" />
+                  </div>
+                  <p className="text-slate-100 text-sm italic">
+                    Professional photos coming soon
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+                  <Link href="/tutors">
+                    Meet Our Tutors
+                    <Users className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-slate-900">
+                  <Link href="/tutors">
+                    Join Waitlist for New Tutors
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Why Choose Summit */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-medium text-yellow-600 uppercase tracking-wider mb-2">
+              Our Difference
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+              Why Choose Summit
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
+            </h2>
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
+              Four key reasons why students and parents trust Summit Tutoring
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-yellow-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <div className="text-yellow-600">
+                    {feature.icon}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                  {feature.title}
+                </h3>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Pricing */}
       <section id="pricing" className="py-16 bg-yellow-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -328,21 +466,97 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Testimonials */}
+      {/* 8. Roadmap teasers */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-              What Students & Parents Say
+              Future Vision
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
             </h2>
             <p className="text-lg text-slate-700 max-w-3xl mx-auto">
+              Exciting developments coming to Summit Tutoring
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="bg-slate-100 text-slate-900 px-3 py-1 rounded-full text-sm font-medium">
+                  Coming Soon
+                </span>
+                <h3 className="text-lg font-semibold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                  Multi-Tutor Marketplace
+                </h3>
+              </div>
+              <p className="text-slate-700 text-sm mb-4">
+                Soon you'll be able to pick from multiple tutors—same high standards, different personalities and styles.
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2 text-sm text-slate-700">
+                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+                  <span>Curated network of expert tutors</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-slate-700">
+                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+                  <span>Match with your learning style</span>
+                </li>
+              </ul>
+              <Button asChild variant="outline" size="sm">
+                <Link href="/marketplace">
+                  Learn more
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="bg-slate-100 text-slate-900 px-3 py-1 rounded-full text-sm font-medium">
+                  In Research
+                </span>
+                <h3 className="text-lg font-semibold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+                  Summit AI Tutor
+                </h3>
+              </div>
+              <p className="text-slate-700 text-sm mb-4">
+                We're exploring an AI assistant trained on our teaching approach to give students 24/7, highly personalized practice.
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2 text-sm text-slate-700">
+                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+                  <span>Always with consent and privacy at the core</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-slate-700">
+                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+                  <span>Supplementary to human tutoring</span>
+                </li>
+              </ul>
+              <Button asChild variant="outline" size="sm">
+                <Link href="/ai-tutor">
+                  Learn more
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Testimonials */}
+      <section className="py-16 bg-slate-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
+              What Students & Parents Say
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
+            </h2>
+            <p className="text-lg text-slate-100 max-w-3xl mx-auto">
               Real feedback from our tutoring sessions
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.01]">
+              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <div 
@@ -354,16 +568,16 @@ export default function Home() {
                   ))}
                 </div>
                 
-                <blockquote className="text-slate-700 italic mb-4 leading-relaxed">
+                <blockquote className="text-slate-100 italic mb-4 leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
                 
                 <div className="flex items-center gap-3">
                   <div>
-                    <div className="font-medium text-slate-900">
+                    <div className="font-medium text-white">
                       {testimonial.name}
                     </div>
-                    <div className="text-sm text-slate-600">
+                    <div className="text-sm text-slate-300">
                       {testimonial.role}
                     </div>
                   </div>
@@ -374,64 +588,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. About the Tutor */}
-      <section className="py-16 bg-slate-900 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-              About the Tutor
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
-            </h2>
-            <p className="text-lg text-slate-100 max-w-3xl mx-auto">
-              Meet your First-Class BEng graduate tutor
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="text-left">
-                  <h3 className="text-2xl font-bold text-white mb-4" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                    First-Class BEng Graduate
-                  </h3>
-                  <p className="text-slate-100 mb-6 leading-relaxed">
-                    I'm passionate about making complex STEM concepts accessible and engaging. 
-                    With a First-Class Honours degree in Electrical & Electronic Engineering, 
-                    I bring both academic excellence and real-world understanding to every session.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <CheckCircle className="h-4 w-4 text-yellow-400" />
-                      <span className="text-sm">Online via Zoom</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <CheckCircle className="h-4 w-4 text-yellow-400" />
-                      <span className="text-sm">Homework help included</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <CheckCircle className="h-4 w-4 text-yellow-400" />
-                      <span className="text-sm">Past paper mastery</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <CheckCircle className="h-4 w-4 text-yellow-400" />
-                      <span className="text-sm">Flexible packages</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="bg-yellow-500/20 rounded-full w-32 h-32 mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-16 w-16 text-yellow-400" />
-                  </div>
-                  <p className="text-slate-100 text-sm italic">
-                    Professional photo coming soon
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Contact / Booking */}
+      {/* 10. Contact / Booking */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -444,7 +601,7 @@ export default function Home() {
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-semibold text-slate-900 mb-2" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
                   Contact Form
@@ -539,82 +696,6 @@ export default function Home() {
               <p className="text-xs text-slate-600 text-center mt-4">
                 We typically respond within 24 hours. For urgent inquiries, please use the Fiverr link above.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Vision Teasers (Roadmap) */}
-      <section className="py-16 bg-yellow-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 relative" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-              Future Vision
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-yellow-500"></div>
-            </h2>
-            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-              Exciting developments coming to Summit Tutoring
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-2xl shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="bg-slate-100 text-slate-900 px-3 py-1 rounded-full text-sm font-medium">
-                  Coming Soon
-                </span>
-                <h3 className="text-lg font-semibold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                  Multi-Tutor Marketplace
-                </h3>
-              </div>
-              <p className="text-slate-700 text-sm mb-4">
-                Soon you'll be able to pick from multiple tutors—same high standards, different personalities and styles.
-              </p>
-              <ul className="space-y-2 mb-4">
-                <li className="flex items-start gap-2 text-sm text-slate-700">
-                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span>Curated network of expert tutors</span>
-                </li>
-                <li className="flex items-start gap-2 text-sm text-slate-700">
-                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span>Match with your learning style</span>
-                </li>
-              </ul>
-              <Button asChild variant="outline" size="sm">
-                <Link href="/marketplace">
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            
-            <div className="bg-white p-6 rounded-2xl shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="bg-slate-100 text-slate-900 px-3 py-1 rounded-full text-sm font-medium">
-                  In Research
-                </span>
-                <h3 className="text-lg font-semibold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                  Summit AI Tutor
-                </h3>
-              </div>
-              <p className="text-slate-700 text-sm mb-4">
-                We're exploring an AI assistant trained on our teaching approach to give students 24/7, highly personalized practice.
-              </p>
-              <ul className="space-y-2 mb-4">
-                <li className="flex items-start gap-2 text-sm text-slate-700">
-                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span>Always with consent and privacy at the core</span>
-                </li>
-                <li className="flex items-start gap-2 text-sm text-slate-700">
-                  <CheckCircle className="h-4 w-4 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span>Supplementary to human tutoring</span>
-                </li>
-              </ul>
-              <Button asChild variant="outline" size="sm">
-                <Link href="/ai-tutor">
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
             </div>
           </div>
         </div>

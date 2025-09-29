@@ -1,0 +1,56 @@
+{
+  "activeTutors": [
+    {
+      "id": "founder",
+      "name": "Lead Tutor",
+      "title": "Founder & Lead Tutor",
+      "subjects": ["GCSE Maths", "GCSE Physics", "A-Level Maths", "A-Level Physics"],
+      "qualifications": "First-Class BEng (Hons) Electrical & Electronic Engineering",
+      "experience": "5+ years tutoring experience",
+      "specialties": ["Neurodivergent-aware teaching", "Exam preparation", "Confidence building"],
+      "bio": "As the founder of Summit Tutoring, I bring both academic excellence and personal understanding to every session. Diagnosed with ADHD myself and having close family with dyslexia, I've developed teaching methods that work for every type of learner.",
+      "avatar": "/assets/tutors/lead-tutor.jpg",
+      "status": "available",
+      "isFounder": true,
+      "personalNote": "I believe no one is smart or dumb—we all just think differently. My mission is to help every student find their path to success."
+    }
+  ],
+  "comingSoon": [
+    {
+      "id": "tutor-2",
+      "name": "Chemistry Specialist",
+      "title": "Chemistry & Science Tutor",
+      "subjects": ["GCSE Chemistry", "A-Level Chemistry", "GCSE Biology"],
+      "qualifications": "PhD Chemistry, 3+ years teaching experience",
+      "specialties": ["Practical chemistry", "Science communication", "Study techniques"],
+      "status": "coming-soon",
+      "joinDate": "Q2 2025"
+    },
+    {
+      "id": "tutor-3", 
+      "name": "Maths Specialist",
+      "title": "Advanced Mathematics Tutor",
+      "subjects": ["A-Level Further Maths", "University Maths", "Statistics"],
+      "qualifications": "MSc Mathematics, 4+ years tutoring experience",
+      "specialties": ["Advanced problem solving", "Mathematical reasoning", "Exam techniques"],
+      "status": "coming-soon",
+      "joinDate": "Q2 2025"
+    },
+    {
+      "id": "tutor-4",
+      "name": "English & Humanities",
+      "title": "English & Essay Writing Tutor", 
+      "subjects": ["GCSE English", "A-Level English Literature", "Essay Writing"],
+      "qualifications": "BA English Literature, 3+ years teaching experience",
+      "specialties": ["Creative writing", "Essay structure", "Literary analysis"],
+      "status": "coming-soon",
+      "joinDate": "Q3 2025"
+    }
+  ],
+  "stats": {
+    "activeTutors": 1,
+    "comingSoon": 3,
+    "totalStudents": "100+",
+    "averageImprovement": "1-2 grades"
+  }
+}

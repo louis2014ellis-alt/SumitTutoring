@@ -1,15 +1,17 @@
 import Link from "next/link";
 import { Mail, Linkedin, BookOpen } from "lucide-react";
 
-const navigation = {
-  main: [
-    { name: "Our Teaching", href: "/our-teaching" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Marketplace", href: "/marketplace" },
-    { name: "AI Tutor", href: "/ai-tutor" },
-    { name: "Contact", href: "/contact" },
-    { name: "Privacy", href: "/privacy" },
-  ],
+  const navigation = {
+    main: [
+      { name: "Mission", href: "/mission" },
+      { name: "Tutors", href: "/tutors" },
+      { name: "Our Teaching", href: "/our-teaching" },
+      { name: "Pricing", href: "/pricing" },
+      { name: "Marketplace", href: "/marketplace" },
+      { name: "AI Tutor", href: "/ai-tutor" },
+      { name: "Contact", href: "/contact" },
+      { name: "Privacy", href: "/privacy" },
+    ],
   social: [
     {
       name: "LinkedIn",
@@ -102,7 +104,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">
-              © 2025 Summit Tutoring. All rights reserved.
+              © 2025 Summit Tutoring — Education that adapts to you.
             </p>
             <p className="text-sm text-gray-500 mt-2 md:mt-0">
               Built with Next.js & Tailwind CSS
