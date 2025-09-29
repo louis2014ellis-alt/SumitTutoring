@@ -27,7 +27,7 @@ export function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <img 
-                src="/assets/logo/summit-logo.svg" 
+                src="/assets/sumit profile photo.PNG" 
                 alt="Summit Tutoring Logo" 
                 className="h-10 w-auto mr-3"
               />
@@ -64,7 +64,7 @@ export function Header() {
                   <div className="flex items-center justify-between mb-8">
                     <div className="flex items-center">
                       <img 
-                        src="/assets/logo/summit-logo.svg" 
+                        src="/assets/sumit profile photo.PNG" 
                         alt="Summit Tutoring Logo" 
                         className="h-8 w-auto mr-2"
                       />
