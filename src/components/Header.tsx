@@ -26,13 +26,11 @@ export function Header() {
         <div className="flex w-full items-center justify-between py-6">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              {/* Logo placeholder - replace with actual logo */}
-              <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg mr-3 flex items-center justify-center">
-                <span className="text-slate-900 font-bold text-sm">S</span>
-              </div>
-              <span className="font-heading text-2xl font-bold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                Summit Tutoring
-              </span>
+              <img 
+                src="/assets/logo/summit-logo.svg" 
+                alt="Summit Tutoring Logo" 
+                className="h-10 w-auto mr-3"
+              />
             </Link>
           </div>
           
@@ -65,12 +63,11 @@ export function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between mb-8">
                     <div className="flex items-center">
-                      <div className="w-6 h-6 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg mr-2 flex items-center justify-center">
-                        <span className="text-slate-900 font-bold text-xs">S</span>
-                      </div>
-                      <span className="font-heading text-xl font-bold text-slate-900" style={{fontFamily: 'Poppins, Montserrat, sans-serif'}}>
-                        Summit Tutoring
-                      </span>
+                      <img 
+                        src="/assets/logo/summit-logo.svg" 
+                        alt="Summit Tutoring Logo" 
+                        className="h-8 w-auto mr-2"
+                      />
                     </div>
                     <Button
                       variant="ghost"

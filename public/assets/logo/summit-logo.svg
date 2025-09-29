@@ -1,0 +1,29 @@
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain range with graduation cap -->
+  <g>
+    <!-- Mountain peaks - more detailed and varied heights -->
+    <path d="M15 50 L25 35 L35 40 L45 25 L55 35 L65 20 L75 30 L85 25 L95 35 L105 20 L115 30 L125 25 L135 35 L145 20 L155 30 L165 25 L175 35 L185 20 L195 30 L200 30 L200 50 Z" 
+          stroke="#D4AF37" stroke-width="2" fill="none"/>
+    
+    <!-- Graduation cap on leftmost peak (highest) -->
+    <g transform="translate(20, 30)">
+      <!-- Cap base (square) -->
+      <rect x="0" y="0" width="10" height="8" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+      <!-- Cap top -->
+      <rect x="1" y="1" width="8" height="6" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <!-- Tassel hanging from left side -->
+      <line x1="0" y1="4" x2="-6" y2="4" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-6" cy="4" r="1.5" fill="#D4AF37"/>
+    </g>
+  </g>
+  
+  <!-- SUMMIT text - large, bold, sans-serif -->
+  <text x="100" y="55" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="700" fill="#D4AF37" letter-spacing="1px">
+    SUMMIT
+  </text>
+  
+  <!-- TUTORING text - smaller, lighter weight -->
+  <text x="100" y="70" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="14" font-weight="300" fill="#D4AF37" letter-spacing="0.5px">
+    TUTORING
+  </text>
+</svg>
