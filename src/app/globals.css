@@ -71,17 +71,18 @@
   }
   
   body {
-    @apply bg-white text-ink-900 font-sans antialiased;
+    @apply bg-white text-gray-900 font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold text-ink-900;
+    @apply font-bold text-gray-900;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
   }
   
   /* Custom focus styles for accessibility */
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2;
   }
   
   /* Gold divider utility */
@@ -91,7 +92,8 @@
   
   .gold-divider::after {
     content: '';
-    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gold-500;
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5;
+    background-color: var(--gold-500);
   }
 }
 
@@ -108,6 +110,63 @@
   
   /* Card hover effects */
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-medium hover:scale-[1.01];
+    @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.01];
+  }
+  
+  /* Custom brand color utilities */
+  .bg-navy-900 {
+    background-color: var(--navy-900);
+  }
+  
+  .bg-navy-700 {
+    background-color: var(--navy-700);
+  }
+  
+  .bg-gold-500 {
+    background-color: var(--gold-500);
+  }
+  
+  .bg-gold-600 {
+    background-color: var(--gold-600);
+  }
+  
+  .bg-cream-50 {
+    background-color: var(--cream-50);
+  }
+  
+  .text-navy-900 {
+    color: var(--navy-900);
+  }
+  
+  .text-gold-500 {
+    color: var(--gold-500);
+  }
+  
+  .text-gold-600 {
+    color: var(--gold-600);
+  }
+  
+  .text-gold-400 {
+    color: var(--gold-400);
+  }
+  
+  .text-ink-900 {
+    color: var(--ink-900);
+  }
+  
+  .text-ink-700 {
+    color: var(--ink-700);
+  }
+  
+  .text-ink-100 {
+    color: var(--ink-100);
+  }
+  
+  .border-gold-500 {
+    border-color: var(--gold-500);
+  }
+  
+  .ring-gold-500 {
+    --tw-ring-color: var(--gold-500);
   }
 }
